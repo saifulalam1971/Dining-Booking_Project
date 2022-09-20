@@ -1,0 +1,36 @@
+
+.heading{
+    text-align: center;
+    padding: 15px;
+    font-size: 25px;
+}
+
+.content{
+    padding:20px;
+    .icon-container{
+       //background-color: green;
+        height: 100px;
+        mat-icon{
+            // font-size: 50px;
+            margin-right: 100px;
+            color: red;
+            padding: 10px;
+            transform: scale(2);
+            
+        }
+    }
+}
+mat-icon:hover{
+    cursor: pointer;
+}
+.table-bordered{
+    margin:0 auto;
+    width:90%;
+    border-collapse: collapse;
+    th,td{
+        padding: 25px;
+        text-align: center;
+        color: black;
+        border: 3px solid black;
+    }
+}

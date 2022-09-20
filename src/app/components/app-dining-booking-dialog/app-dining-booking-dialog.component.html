@@ -1,0 +1,83 @@
+<div class="dialog-container m-0 p-0" fxLayout="column">
+    <h2>Booking</h2>
+    <div class="content m-0 p-0" fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="customer-form" fxLayout="column" fxLayoutAlign="start start">
+            <span>Select your dining space</span>
+            <div class="select-btn-container" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+                <button class="cursor-pointer" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="8px" (click)="selecTwoPerson()">
+                    <img src="https://cdn-icons-png.flaticon.com/128/8370/8370084.png">
+                    <div class="dining-person" fxLayout="column" fxLayoutAlign="center center">
+                        <span>02</span>
+                        <span>person</span>
+                    </div>
+
+                </button>
+                <button class="cursor-pointer" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="8px" (click)=" selecFourPerson()">
+                    <img src="https://cdn-icons-png.flaticon.com/128/8370/8370084.png">
+                    <div class="dining-person" fxLayout="column" fxLayoutAlign="center center">
+                        <span>04</span>
+                        <span>person</span>
+                    </div>
+                </button>
+                <button class="cursor-pointer" (click)=" selecCustomPerson()">
+                    <span >Custom</span>
+                </button>
+            </div>
+            <div>
+                <form [formGroup]="customer_form" (ngSubmit)="saveCustomerData()">
+                    <div class="customer-details" fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="15px">
+                        <div class="customer-dining-details" fxLayout="column" fxLayoutGap="4px">
+                            <span class="">Customer dining space</span>
+                            <input type="text" class="" placeholder="" formControlName="customerDiningSpace" name="">
+                        </div>
+                        <div class="customer-dining-occasion" fxLayout="column" fxLayoutGap="4px">
+                            <span>Occasion</span>
+                            <select  id="cars" name="cars"  formControlName="Occasion">
+                                  <option value="birthday" selected>Birthday</option>
+                                  <option value="marriage"  >Marriage</option>
+                                  <option value="personal">Personal</option>
+                                  <option value="dinner">Dinner party</option>
+                            </select>
+                        </div>
+                        <div class="dining-date"  fxLayout="column" fxLayoutGap="4px">
+                            <span>Occasion Date</span>
+                            <mat-form-field appearance="fill">
+                                <!-- <mat-label>Choose a date</mat-label> -->
+                                <input formControlName="Occasion_Date" class="" matInput [matDatepicker]="picker">
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                              </mat-form-field>
+                        </div>
+                        <div class="dining-time" fxLayout="column" fxLayoutGap="4px">
+                            <span>Occasion Time</span>
+                            <select name="" id="3:30 PM" formControlName="Occasion_Time">
+                                <option *ngFor="let item of dinigTime; let i =index"  [value]=item>{{item}}</option>
+                               
+                          </select>
+                        </div>
+                    </div>
+                    <div class="customer-personal-details" fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="15px">
+                        <div class="" fxLayout="column" fxLayoutGap="4px">
+                            <span class="">Enter Name</span>
+                            <input type="text" class="" placeholder="Name" formControlName="Name" name="">
+                        </div>
+                        <div class="" fxLayout="column" fxLayoutGap="4px">
+                            <span class="">Phone Number</span>
+                            <input type="text" class="" placeholder="Phone No." formControlName="Phone" name="">
+                        </div>
+                        <div class="" fxLayout="column" fxLayoutGap="4px">
+                            <span class="">Email</span>
+                            <input type="text" class="" placeholder="Email" formControlName="Email" name="">
+                        </div>
+                        
+                    </div>
+                    <div class="book-btn"  fxLayout="row" fxLayoutAlign="end center">
+                        <button type="submit" class="cursor-pointer" mat-dialog-close>BOOK NOW</button>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

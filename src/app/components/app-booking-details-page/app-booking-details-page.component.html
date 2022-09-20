@@ -1,0 +1,44 @@
+<div class="dialog-container m-0 p-0" fxLayout="row" fxLayoutAlign="end center">
+  <div class="booking-details" fxLayout="column" fxLayoutGap="15px">
+    <div class="heading" fxLayout="row" fxLayoutAlign="start center" >
+        <h2>Booking Details</h2>
+    </div>
+    <div class="dining-info" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="50px">
+        <div class="" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="15px">
+            <span>Dining Space</span>
+            <span>{{customerInfo[detailsIndex].customerDiningSpace}} person</span>
+
+        </div>
+        <div class="" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="15px">
+            <span>Occasion</span>
+            <span>{{customerInfo[detailsIndex].Occasion}}</span>
+        </div>
+        <div class="" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="15px">
+            <span>Occasion Date</span>
+            <span>{{customerInfo[detailsIndex].Occasion_Date | date }}</span>
+        </div>
+        <div class="" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="15px">
+            <span>Occasion Time</span>
+            <span>{{customerInfo[detailsIndex].Occasion_Time}}</span>
+        </div>
+    </div>
+    <div class="user-heading" fxLayout="row" fxLayoutAlign="start center" >
+        <h2>User Details</h2>
+    </div>
+    <div class="user-info" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="60px">
+        <div class="" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="15px">
+            <span>Name</span>
+            <span>{{customerInfo[detailsIndex].Name}}</span>
+
+        </div>
+        <div class="" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="15px">
+            <span>Phone Number</span>
+            <span>{{customerInfo[detailsIndex].Phone}}</span>
+        </div>
+        <div class="" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="15px">
+            <span>Email Id</span>
+            <span>{{customerInfo[detailsIndex].Email}}</span>
+        </div>
+    </div>
+  </div>
+</div>
